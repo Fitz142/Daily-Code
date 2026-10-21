@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daily Code News - berita teknologi, AI, pemrograman, dan dunia developer.">
+  <title>Daily Code News | Tech, Code & Ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <span class="live-dot"></span>
+      <span>YOUR DAILY DOSE OF TECH</span>
+      <span class="announcement-date" id="todayDate">TECH · CODE · IDEAS</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-main">
+      <a href="#home" class="brand" aria-label="Daily Code News beranda">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span class="brand-text">daily<span>code</span><small>NEWS FOR BUILDERS</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <a href="#latest">Latest</a>
+        <a href="#latest" data-nav-category="AI">AI & ML</a>
+        <a href="#latest" data-nav-category="Coding">Coding</a>
+        <a href="#latest" data-nav-category="Tech">Technology</a>
+        <a href="#watch">Watch & Learn</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        </button>
+        <a class="header-cta" href="#latest">Explore news <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero-section container">
+      <div class="section-eyebrow"><span class="eyebrow-line"></span> THE DAILY BRIEFING <span class="eyebrow-date" id="heroDate">A FRESH TAKE ON TECH</span></div>
+      <div class="hero-grid">
+        <article class="hero-feature">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=85" alt="Detail papan sirkuit komputer" class="hero-image">
+            <span class="image-label">EDITOR'S PICK</span>
+          </div>
+          <div class="hero-copy">
+            <div class="article-meta"><span class="category-tag tag-ai">AI & FUTURE</span><span>6 MIN READ</span><span>•</span><span>FEATURED STORY</span></div>
+            <h1>Code is changing.<br><span>Are you ready?</span></h1>
+            <p class="hero-description">A closer look at the tools, ideas, and emerging technologies changing the way developers build the future.</p>
+            <a class="read-link" href="#latest">Read the latest stories <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <aside class="hero-side" aria-label="Sorotan berita">
+          <div class="side-heading"><span>IN THE SPOTLIGHT</span><span class="side-count">01—03</span></div>
+          <article class="spotlight-card">
+            <span class="spotlight-number">01</span>
+            <div><span class="mini-category">ARTIFICIAL INTELLIGENCE</span><h2>AI coding tools: your new pair-programming partner</h2><p>How smart assistants can help with the everyday work of coding.</p><a href="#latest" aria-label="Baca artikel AI coding tools">Read story ↗</a></div>
+          </article>
+          <article class="spotlight-card">
+            <span class="spotlight-number">02</span>
+            <div><span class="mini-category">WEB DEVELOPMENT</span><h2>Building a faster, friendlier web</h2><p>Small performance improvements can make a big difference.</p><a href="#latest" aria-label="Baca artikel web development">Read story ↗</a></div>
+          </article>
+          <article class="spotlight-card">
+            <span class="spotlight-number">03</span>
+            <div><span class="mini-category">DEVELOPER LIFE</span><h2>Why fundamentals still matter</h2><p>The basics remain a developer's most reliable tools.</p><a href="#latest" aria-label="Baca artikel dasar pemrograman">Read story ↗</a></div>
+          </article>
+          <div class="side-note"><span class="note-icon">✳</span><span>Built for curious minds.<br><strong>Made for what's next.</strong></span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="latest-section" id="latest">
+      <div class="container">
+        <div class="section-heading-row">
+          <div><div class="section-kicker">FRESH OFF THE FEED / 001</div><h2>Latest <span>stories.</span></h2><p class="section-subtitle">Ideas and updates from the world of code, tech, and everything in between.</p></div>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+            <input id="searchInput" type="search" placeholder="Search stories..." aria-label="Cari berita">
+            <kbd>/</kbd>
+          </div>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filter kategori berita">
+          <button class="filter-button active" data-category="All">All stories <span>06</span></button>
+          <button class="filter-button" data-category="AI">AI & ML</button>
+          <button class="filter-button" data-category="Coding">Coding</button>
+          <button class="filter-button" data-category="Tech">Technology</button>
+          <button class="filter-button" data-category="Web">Web dev</button>
+          <span class="results-label" id="resultsLabel">SHOWING 06 STORIES</span>
+        </div>
+
+        <div class="content-grid">
+          <div class="article-grid" id="articleGrid" aria-live="polite"></div>
+          <aside class="trending-sidebar">
+            <div class="trending-panel">
+              <div class="panel-title"><span class="trending-flame">↗</span><span>THE SHORTLIST</span></div>
+              <p class="panel-intro">A few things worth your attention.</p>
+              <a class="trend-item" href="#newsletter"><span class="trend-index">01</span><span><strong>Learn by building</strong><small>PROJECTS / 4 MIN</small></span><span class="trend-arrow">↗</span></a>
+              <a class="trend-item" href="#newsletter"><span class="trend-index">02</span><span><strong>Inside the AI toolkit</strong><small>AI / 6 MIN</small></span><span class="trend-arrow">↗</span></a>
+              <a class="trend-item" href="#newsletter"><span class="trend-index">03</span><span><strong>Better code habits</strong><small>CODING / 3 MIN</small></span><span class="trend-arrow">↗</span></a>
+              <a class="trend-item" href="#newsletter"><span class="trend-index">04</span><span><strong>What's next for the web?</strong><small>WEB / 5 MIN</small></span><span class="trend-arrow">↗</span></a>
+            </div>
+            <div class="quote-panel"><span class="quote-mark">“</span><blockquote>First, solve the problem. Then, write the code.</blockquote><span class="quote-byline">A GOOD RULE FOR EVERY BUILDER</span><div class="quote-decoration">{ }</div></div>
+          </aside>
+        </div>
+        <div class="load-more-wrap"><button class="load-more-button" id="loadMoreButton">Load more stories <span>↓</span></button></div>
+        <p class="demo-note">Catatan: artikel pada halaman ini adalah konten contoh untuk latihan desain, bukan feed berita langsung.</p>
+      </div>
+    </section>
+
+    <section class="watch-section" id="watch">
+      <div class="container">
+        <div class="watch-heading">
+          <div>
+            <div class="section-kicker">WATCH & LEARN / VIDEO ROOM</div>
+            <h2>Press play.<br><span>Learn something.</span></h2>
+          </div>
+          <p class="watch-heading-note">A little screen time that builds real skills. Start with the basics, then create something of your own.</p>
+        </div>
+
+        <div class="watch-grid">
+          <div class="video-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/qz0aGYrrlhU"
+                title="HTML Tutorial for Beginners: HTML Crash Course by Programming with Mosh"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-card-footer">
+              <span><span class="video-status-dot"></span> VIDEO PICK</span>
+              <span>HTML · CSS · WEB BASICS</span>
+            </div>
+          </div>
+
+          <aside class="video-info">
+            <span class="video-overline">THE BEGINNER'S PLAYLIST / 001</span>
+            <h3>HTML Tutorial for Beginners</h3>
+            <p>Learn how webpages are built, from basic HTML structure to links, images, and a first look at CSS. This tutorial is hosted on YouTube by Programming with Mosh.</p>
+            <div class="video-topics">
+              <span><b>01</b> Understand HTML</span>
+              <span><b>02</b> Add text and links</span>
+              <span><b>03</b> Explore CSS basics</span>
+            </div>
+            <a class="video-watch-link" href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank" rel="noopener noreferrer">Open on YouTube <span aria-hidden="true">↗</span></a>
+            <p class="video-note">Video memerlukan koneksi internet. Jika pemutar tidak muncul, buka videonya lewat tautan di atas.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-inner">
+        <div class="newsletter-copy"><div class="section-kicker">THE WEEKLY BYTE / YOUR INBOX</div><h2>Stay curious.<br><span>Stay in the loop.</span></h2><p>Get a curated collection of coding ideas and tech stories, delivered right to your inbox.</p></div>
+        <form class="newsletter-form" id="newsletterForm">
+          <label for="emailInput">YOUR EMAIL ADDRESS</label>
+          <div class="email-entry"><input id="emailInput" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Daftar newsletter">JOIN US <span>↗</span></button></div>
+          <p class="form-message" id="formMessage" aria-live="polite">No spam. Just the good stuff. Unsubscribe anytime.</p>
+        </form>
+        <div class="newsletter-decoration" aria-hidden="true">&lt;/&gt;</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a href="#home" class="brand footer-brand"><span class="brand-mark">&lt;/&gt;</span><span class="brand-text">daily<span>code</span><small>NEWS FOR BUILDERS</small></span></a>
+      <p>Good ideas are worth sharing.<br><span>Keep learning. Keep building.</span></p>
+      <div class="footer-links"><a href="#latest">Stories</a><a href="#newsletter">Newsletter</a><a href="#home">Back to top ↑</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> DAILY CODE NEWS</span><span>DESIGNED FOR CURIOUS MINDS <b>✳</b></span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
