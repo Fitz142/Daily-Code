@@ -1,0 +1,507 @@
+/* Reset Basic & Variables */
+:root {
+    --primary-color: #c80000; /* Merah khas TV Berita (TVOne/RCTV) */
+    --secondary-color: #1a1a1a;
+    --accent-color: #ffcc00;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #222222;
+    --text-muted: #666666;
+    --border-color: #dddddd;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #f0f0f0;
+    --text-muted: #aaaaaa;
+    --border-color: #333333;
+    --secondary-color: #0d0d0d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 6px 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-links a:hover {
+    color: var(--accent-color);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--card-bg);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.brand h1 span {
+    color: var(--text-color);
+}
+
+.live-badge {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.search-box button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    overflow-x: auto;
+}
+
+.nav-links a {
+    color: white;
+    padding: 12px 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Breaking News / Marquee */
+.breaking-news {
+    background-color: #222;
+    color: white;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.bn-container {
+    display: flex;
+    align-items: center;
+}
+
+.bn-title {
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.bn-ticker {
+    flex-grow: 1;
+    padding: 0 10px;
+    font-size: 0.9rem;
+}
+
+/* Main Layout Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+/* Hero & Video */
+.main-hero {
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.hero-details {
+    padding: 20px;
+}
+
+.category-tag {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.hero-details h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.hero-details .summary {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.meta-info {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* News Grid Cards */
+.section-title {
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title span {
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.news-card {
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    position: relative;
+    height: 160px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-tag {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-content h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.card-content .time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Sidebar Widgets */
+.widget {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.widget h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    color: var(--primary-color);
+}
+
+/* Trending List */
+.trending-list {
+    padding-left: 20px;
+}
+
+.trending-list li {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.trending-list a:hover {
+    color: var(--primary-color);
+}
+
+/* Schedule Widget */
+.schedule-list {
+    list-style: none;
+}
+
+.schedule-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 0.85rem;
+}
+
+.schedule-list li.active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Newsletter Widget */
+.newsletter-widget input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.newsletter-widget button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-about h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.footer-about h2 span {
+    color: #fff;
+}
+
+.footer-about p {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    color: #bbb;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #333;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 10px;
+}
+
+.social-icons a:hover {
+    background: var(--primary-color);
+}
+
+.footer-bottom {
+    background: #0d0d0d;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Responsive Web Design */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

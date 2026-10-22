@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusantara News 24 - Berita Harian Terkini</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="date-time" id="current-date">Kamis, 22 Oktober 2026</div>
+            <div class="top-links">
+                <a href="#"><i class="fas fa-satellite-dish"></i> Live Streaming</a>
+                <a href="#"><i class="fas fa-tv"></i> TV Guide</a>
+                <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Brand Logo -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="brand">
+                <span class="live-badge"><i class="fas fa-circle"></i> LIVE</span>
+                <h1>NUSANTARA<span>NEWS24</span></h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Cari berita terkini...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="container nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Beranda</a>
+            <a href="#">Nasional</a>
+            <a href="#">Politik</a>
+            <a href="#">Hukum & Kriminal</a>
+            <a href="#">Ekonomi</a>
+            <a href="#">Olahraga</a>
+            <a href="#">Teknologi</a>
+            <a href="#">Daerah</a>
+        </div>
+    </nav>
+
+    <!-- Breaking News / Running Text -->
+    <div class="breaking-news">
+        <div class="container bn-container">
+            <div class="bn-title">BREAKING NEWS</div>
+            <div class="bn-ticker">
+                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    🚨 BMKG keluarkan peringatan dini cuaca ekstrem di wilayah Jawa Barat dan sekitarnya &nbsp;•&nbsp; 
+                    📊 Menteri Ekonomi sampaikan laporan pertumbuhan ekonomi nasional kuartal ketiga &nbsp;•&nbsp; 
+                    ⚽ Timnas Indonesia bersiap menghadapi laga kualifikasi mendatang di Stadion Gelora Bung Karno
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+        <!-- Main Grid Left Side -->
+        <section class="primary-section">
+            
+            <!-- Highlight Video / Broadcast Frame (Hero) -->
+            <div class="main-hero">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/live_stream?channel=UCprimary" title="TV Streaming" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-badge">SIARAN LANGSUNG</div>
+                </div>
+                <div class="hero-details">
+                    <span class="category-tag">UTAMA</span>
+                    <h2>Sidang Pleno Perkembangan Infrastruktur Digital & Ekonomi Kreatif 2026</h2>
+                    <p class="summary">Pemerintah kembali menggelar rapat koordinasi tingkat tinggi guna mempercepat pemerataan akses teknologi serta penguatan sektor UMKM berbasis digital di seluruh provinsi.</p>
+                    <div class="meta-info">
+                        <span><i class="far fa-clock"></i> 10 Menit yang lalu</span> | 
+                        <span><i class="far fa-eye"></i> 12.450 Penonton</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <h3 class="section-title"><span>Berita Terkini</span></h3>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=500&auto=format&fit=crop" alt="Berita 1">
+                        <span class="card-tag">POLITIK</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Komisi Pemilihan Evaluasi Persiapan Tahapan Pemilu Daerah</h4>
+                        <p>Rapat dengar pendapat pembahasan regulasi dan kesiapan logistik terus dioptimalkan...</p>
+                        <span class="time"><i class="far fa-clock"></i> 25 Menit lalu</span>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500&auto=format&fit=crop" alt="Berita 2">
+                        <span class="card-tag">EKONOMI</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Harga Komoditas Pangan Stabil Menjelang Akhir Bulan</h4>
+                        <p>Pantauan pasar menunjukkan pasokan beras dan cabai relatif aman dan terjangkau...</p>
+                        <span class="time"><i class="far fa-clock"></i> 1 Jam lalu</span>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517649763962-0c6232662000?w=500&auto=format&fit=crop" alt="Berita 3">
+                        <span class="card-tag">OLAHRAGA</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Persiapan Atlet Badminton Menjelang Turnamen Internasional</h4>
+                        <p>Pelatnas intensifkan latihan fisik dan taktik menjelang seri kejuaraan terbuka...</p>
+                        <span class="time"><i class="far fa-clock"></i> 2 Jam lalu</span>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop" alt="Berita 4">
+                        <span class="card-tag">TEKNOLOGI</span>
+                    </div>
+                    <div class="card-content">
+                        <h4>Inovasi Jaringan AI Lokal Siap Mengudara Tahun Ini</h4>
+                        <p>Pengembang dalam negeri luncurkan solusi kecerdasan buatan berbasis infrastruktur terpadu...</p>
+                        <span class="time"><i class="far fa-clock"></i> 3 Jam lalu</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sidebar Right Side -->
+        <aside class="sidebar">
+            
+            <!-- Trending Topic Widget -->
+            <div class="widget trending-widget">
+                <h3><i class="fas fa-fire"></i> Trending Topik</h3>
+                <ol class="trending-list">
+                    <li><a href="#">#CuacaEkstrem2026</a></li>
+                    <li><a href="#">#TimnasGaruda</a></li>
+                    <li><a href="#">#SidangDPR</a></li>
+                    <li><a href="#">#InflasiRendah</a></li>
+                    <li><a href="#">#InovasiDigital</a></li>
+                </ol>
+            </div>
+
+            <!-- TV Schedule Widget -->
+            <div class="widget schedule-widget">
+                <h3><i class="fas fa-calendar-alt"></i> Jadwal Acara Hari Ini</h3>
+                <ul class="schedule-list">
+                    <li><span class="time">06:00</span> <span class="program">Kabari Pagi Terkini</span></li>
+                    <li><span class="time">09:00</span> <span class="program">Bicara Hukum & Bisnis</span></li>
+                    <li class="active"><span class="time">13:00</span> <span class="program">Nusantara News Siang (LIVE)</span></li>
+                    <li><span class="time">16:30</span> <span class="program">Bedah Kasus Kriminal</span></li>
+                    <li><span class="time">19:00</span> <span class="program">Sorotan Utama Malam</span></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="widget newsletter-widget">
+                <h3><i class="fas fa-envelope"></i> Langganan Berita</h3>
+                <p>Dapatkan rangkuman berita harian paling akurat langsung di email Anda.</p>
+                <form id="subscribe-form">
+                    <input type="email" id="sub-email" placeholder="Alamat Email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-about">
+                <h2>NUSANTARA<span>NEWS24</span></h2>
+                <p>Media televisi & portal berita tepercaya menyajikan informasi terkini, aktual, tajam, dan terpercaya 24 jam sehari.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Kategori</h4>
+                <ul>
+                    <li><a href="#">Nasional</a></li>
+                    <li><a href="#">Internasional</a></li>
+                    <li><a href="#">Ekonomi</a></li>
+                    <li><a href="#">Olahraga</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nusantara News 24. Hak Cipta Dilindungi Undang-Undang.</p>
+            <p>Hafizh Akmal P / X PPLG 2 / 15</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
